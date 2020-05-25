@@ -1,0 +1,30 @@
+<?php
+
+$chuck = array("fullname"=> "Chuck Severance", 'room'=> '4429NQ');
+$colleen = array("familyname"=> 'van Lent', 'givenname'=>'Colleen', 'room'=> '3439NQ');
+
+function get_person_name($person){
+
+    if(isset($person['fullname'])) {
+        return $person['fullname'];
+    }
+    if(isset($person['familyname']) && isset($person['givenname'])){
+        return $person['givenname'] . ' ' . $person['familyname'];
+    }
+    return false;
+}
+
+echo get_person_name($chuck) . "\n";
+print get_person_name($colleen)
+
+
+?>
+<html>
+    <head>
+        <title> Date</title>
+    </head>
+
+    <body style="background: grey">
+
+    </body>
+</html>
